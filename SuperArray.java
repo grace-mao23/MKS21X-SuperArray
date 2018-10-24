@@ -56,8 +56,9 @@ public class SuperArray{
     if (i < 0 || i >= size()) {
       return null;
     } else {
+      old = data[i]
       data[i] = str;
-      return null;
+      return old;
     }
   }
 
