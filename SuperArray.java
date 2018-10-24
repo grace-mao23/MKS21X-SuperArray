@@ -27,20 +27,24 @@ public class SuperArray{
   }
 
   public String toString() {
-    String result = "[ ";
+    String result = "[";
     for (int i = 0; i < size(); i++) {
       result += data[i] + ", ";
     }
-    result = result.substring(0,result.length() - 2);
+    if (!result.equals("[")) {
+      result = result.substring(0,result.length() - 2);
+    }
     result += "]";
     return result;
   }
   public String toStringDebug() {
-    String result = "[ ";
+    String result = "[";
     for (int i = 0; i < data.length; i++) {
       result += data[i] + ", ";
     }
-    result = result.substring(0,result.length() - 2);
+    if (!result.equals("[")) {
+      result = result.substring(0,result.length() - 2);
+    }
     result += "]";
     return result;
   }
@@ -56,7 +60,7 @@ public class SuperArray{
     if (i < 0 || i >= size()) {
       return null;
     } else {
-      old = data[i]
+      String old = data[i];
       data[i] = str;
       return old;
     }
