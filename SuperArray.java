@@ -75,6 +75,8 @@ public class SuperArray{
       newData[i] = data[i];
     }
     data = newData;
+    // For Testing Purposes - Delete Later
+    System.out.println("Resized!");
   }
 
 }
