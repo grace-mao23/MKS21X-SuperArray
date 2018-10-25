@@ -115,6 +115,7 @@ public class SuperArray{
         data[i+1] = data[i];
       }
       data[index] = str;
+      size++;
     }
   }
 }
