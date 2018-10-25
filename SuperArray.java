@@ -13,6 +13,7 @@ public class SuperArray{
   public int size() {
     return size;
   }
+
   public boolean isEmpty() {
     return size == 0;
   }
@@ -23,6 +24,7 @@ public class SuperArray{
       resize();
     }
     data[a] = str;
+    size++;
     return true;
   }
 
@@ -73,7 +75,6 @@ public class SuperArray{
       newData[i] = data[i];
     }
     data = newData;
-    size = size() * 2 + 1;
   }
 
 }
