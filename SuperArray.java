@@ -103,4 +103,18 @@ public class SuperArray{
     }
     return -1;
   }
+
+  public void add(int index, String str) {
+    if (index < 0 || index > size()) {
+      System.out.println("Error: Index out of range");
+    } else {
+      if (size() == data.length) {
+        resize();
+      }
+      for (int i = size() - 1; i >= index; i--) {
+        data[i+1] = data[i];
+      }
+      data[index] = str;
+    }
+  }
 }
