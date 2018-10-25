@@ -18,12 +18,12 @@ public class SuperArray{
   }
 
   public boolean add(String str) {
-    if (size() + 1 <= data.length) {
-      data[size] = str;
-      size++;
-      return true;
+    int a = size();
+    if (size() == data.length) {
+      resize();
     }
-    return false;
+    data[a] = str;
+    return true;
   }
 
   public String toString() {
@@ -64,6 +64,16 @@ public class SuperArray{
       data[i] = str;
       return old;
     }
+  }
+
+  private void resize() {
+    String[] newData;
+    newData = new String[size() * 2 + 1];
+    for (int i = 0; i < size(); i++) {
+      newData[i] = data[i];
+    }
+    data = newData;
+    size = size() * 2 + 1;
   }
 
 }
