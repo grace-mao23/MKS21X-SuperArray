@@ -53,6 +53,7 @@ public class SuperArray{
 
   public String get(int i) {
     if (i < 0 || i >= size()) {
+      System.out.println("Error: index out of range");
       return null;
     } else {
       return data[i];
@@ -60,6 +61,7 @@ public class SuperArray{
   }
   public String set(int i, String str) {
     if (i < 0 || i >= size()) {
+      System.out.println("Error: index out of range");
       return null;
     } else {
       String old = data[i];
@@ -76,7 +78,7 @@ public class SuperArray{
     }
     data = newData;
     // For Testing Purposes - Delete Later
-    System.out.println("Resized!");
+    // System.out.println("Resized!");
   }
 
   public boolean contains(String target) {
