@@ -177,17 +177,14 @@ public class Driver{
 
     System.out.println();
 
-    if (SA.remove("?")) System.out.println("SA: " + SA);
-    else System.out.println("Index out of range, cannot remove element");
-    // should print "SA: [How, is, this, witchery, still, happening, My, question, is, :, what, is, one, plus, one]"
-    if (SA.remove(":")) System.out.println("SA: " + SA);
-    else System.out.println("Index out of range, cannot remove element");
-    // should print "SA: [How, is, this, witchery, still, happening, My, question, is, what, is, one, plus, one]"
-    if (SA.remove("yadayadayada")) System.out.println("SA: " + SA);
-    else System.out.println("Index out of range, cannot remove element");
-    // should print "Index out of range, cannot remove element"
-    if (SA.remove("howw")) System.out.println("SA: " + SA);
-    else System.out.println("Index out of range, cannot remove element");
-    // should print "Index out of range, cannot remove element"
+    // EXCEPTION CASES WITH TRY AND CATCH FOR REMOVE
+    try {
+      SA.remove(0);
+      System.out.println("SA: " + SA);
+      SA.remove(500); // should trigger exception
+      System.out.println("SA: " + SA); // would print, should have no effect whatsoever due to exception above
+    } catch (IndexOutOfBoundsException e) {
+      System.out.println(e);
+    }
   }
 }

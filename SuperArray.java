@@ -135,7 +135,6 @@ public class SuperArray{
       size--;
       return result;
     }
-    return null;
   }
 
   public boolean remove(String str) {
