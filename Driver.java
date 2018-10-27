@@ -53,7 +53,9 @@ public class Driver{
     System.out.println("Fourth element of SA: " + SA.get(3));
     // should print "Fourth element of SA: witchery"
 
-    // EXCEPTION CASES WITH TRY AND CATCH
+    System.out.println();
+
+    // EXCEPTION CASES WITH TRY AND CATCH FOR GET
     try {
       System.out.println("Fourth element of SA: " + SA.get(3)); // should return witchery
       System.out.println("Negative first element of SA: " + SA.get(-1)); // should trigger exception
@@ -74,6 +76,18 @@ public class Driver{
     // should print "SA: [How, is, this, witchery]"
     System.out.println("SA(debug): " + SA.toStringDebug());
     // should print "SA(debug): [How, is, this, witchery, null, null, null, null, null, null]"
+
+    System.out.println();
+
+    // EXCEPTION CASES WITH TRY AND CATCH FOR SET
+    try {
+      System.out.println("Old first element of SA: " + SA.set(0,"Why")); // should return How
+      System.out.println("SA: " + SA);
+      System.out.println("Old tenth element of SA: " + SA.set(10,"haha")); // should trigger exception
+      System.out.println("SA: " + SA); // would print, should have no effect whatsoever due to exception above
+    } catch (IndexOutOfBoundsException e) {
+      System.out.println(e);
+    }
 
     System.out.println();
 
