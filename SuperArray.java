@@ -111,7 +111,7 @@ public class SuperArray{
 
   public void add(int index, String str) {
     if (index < 0 || index > size()) {
-      System.out.println("Error: Index out of range");
+      throw new IndexOutOfBoundsException("Index given is out of range for add method");
     } else {
       if (size() == data.length) {
         resize();
@@ -126,7 +126,7 @@ public class SuperArray{
 
   public String remove(int index) {
     if (index < 0 || index > size()) {
-      System.out.println("Error: Index out of range");
+      throw new IndexOutOfBoundsException("Index given is out of range for remove method");
     } else {
       String result = data[index];
       for (int i = index; i < size() - 1; i++) {
