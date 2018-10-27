@@ -20,7 +20,7 @@ public class Driver{
     System.out.println("SA(debug): " + SA.toStringDebug());
     // should print "SA(debug): [What, null, null, null, null, null, null, null, null, null]"
     if (SA.add("is")) System.out.println("Added element successfully!");
-    // should print "Added element successfully"
+    // should print "Added element successfull!y"
     System.out.println("SA: " + SA);
     // should print "SA: [What, is]"
     System.out.println("SA(debug): " + SA.toStringDebug());
@@ -28,13 +28,13 @@ public class Driver{
     System.out.println("SA size: " + SA.size());
     // should print "SA size: 2"
     if (SA.add("this")) System.out.println("Added element successfully!");
-    // should print "Added element successfully"
+    // should print "Added element successfully!"
     System.out.println("SA: " + SA);
     // should print "SA: [What, is, this]"
     System.out.println("SA(debug): " + SA.toStringDebug());
     // should print "SA(debug): [What, is, this, null, null, null, null, null, null, null]"
     if (SA.add("witchery")) System.out.println("Added element successfully!");
-    // should print "Added element successfully"
+    // should print "Added element successfully!"
     System.out.println("SA: " + SA);
     // should print "SA: [What, is, this, witchery]"
     System.out.println("SA(debug): " + SA.toStringDebug());
@@ -57,9 +57,12 @@ public class Driver{
 
     // EXCEPTION CASES WITH TRY AND CATCH FOR GET
     try {
-      System.out.println("Fourth element of SA: " + SA.get(3)); // should return witchery
-      System.out.println("Negative first element of SA: " + SA.get(-1)); // should trigger exception
-      System.out.println(SA.get(0)); // would work, but should have no effect whatsoever due to exception above
+      System.out.println("Fourth element of SA: " + SA.get(3));
+      // should return witchery
+      System.out.println("Negative first element of SA: " + SA.get(-1));
+      // should trigger exception
+      System.out.println(SA.get(0));
+      // would work, but should have no effect whatsoever due to exception above
     } catch (IndexOutOfBoundsException e) {
       System.out.println(e);
     }
@@ -72,19 +75,19 @@ public class Driver{
     // should print "SA: [How, is, this, witchery]"
     System.out.println("SA(debug): " + SA.toStringDebug());
     // should print "SA(debug): [How, is, this, witchery, null, null, null, null, null, null]"
-    System.out.println("SA: " + SA);
-    // should print "SA: [How, is, this, witchery]"
-    System.out.println("SA(debug): " + SA.toStringDebug());
-    // should print "SA(debug): [How, is, this, witchery, null, null, null, null, null, null]"
 
     System.out.println();
 
     // EXCEPTION CASES WITH TRY AND CATCH FOR SET
     try {
-      System.out.println("Old first element of SA: " + SA.set(0,"Why")); // should return How
+      System.out.println("Old first element of SA: " + SA.set(0,"Why"));
+      // should print "Old first element of SA: How"
       System.out.println("SA: " + SA);
-      System.out.println("Old tenth element of SA: " + SA.set(10,"haha")); // should trigger exception
-      System.out.println("SA: " + SA); // would print, should have no effect whatsoever due to exception above
+      // should print "SA: [Why, is, this, witchery]"
+      System.out.println("Old tenth element of SA: " + SA.set(10,"haha"));
+      // should trigger exception
+      System.out.println("SA: " + SA);
+      // would print, should have no effect whatsoever due to exception above
     } catch (IndexOutOfBoundsException e) {
       System.out.println(e);
     }
@@ -98,28 +101,28 @@ public class Driver{
     SA.add("question");
     SA.add("is");
     System.out.println("SA: " + SA);
-    // should print "SA: [How, is, this, witchery, still, happening, ?, My, question, is]"
+    // should print "SA: [Why, is, this, witchery, still, happening, ?, My, question, is]"
     SA.add(":");
     System.out.println("SA: " + SA);
-    // should print "SA: [How, is, this, witchery, still, happening, ?, My, question, is, :]"
+    // should print "SA: [Why, is, this, witchery, still, happening, ?, My, question, is, :]"
     SA.add("what");
     System.out.println("SA: " + SA);
-    // should print "SA: [How, is, this, witchery, still, happening, ?, My, question, is, :, what]"
+    // should print "SA: [Why, is, this, witchery, still, happening, ?, My, question, is, :, what]"
     SA.add("is");
     System.out.println("SA: " + SA);
-    // should print "SA: [How, is, this, witchery, still, happening, ?, My, question, is, :, what, is]"
+    // should print "SA: [Why, is, this, witchery, still, happening, ?, My, question, is, :, what, is]"
     SA.add("one");
     System.out.println("SA: " + SA);
-    // should print "SA: [How, is, this, witchery, still, happening, ?, My, question, is, :, what, is, one]"
+    // should print "SA: [Why, is, this, witchery, still, happening, ?, My, question, is, :, what, is, one]"
     SA.add("plus");
     System.out.println("SA: " + SA);
-    // should print "SA: [How, is, this, witchery, still, happening, ?, My, question, is, :, what, is, one, plus]"
+    // should print "SA: [Why, is, this, witchery, still, happening, ?, My, question, is, :, what, is, one, plus]"
     SA.add("one");
     System.out.println("SA: " + SA);
-    // should print "SA: [How, is, this, witchery, still, happening, ?, My, question, is, :, what, is, one, plus, one]"
+    // should print "SA: [Why, is, this, witchery, still, happening, ?, My, question, is, :, what, is, one, plus, one]"
     SA.add("?");
     System.out.println("SA: " + SA);
-    // should print "SA: [How, is, this, witchery, still, happening, ?, My, question, is, :, what, is, one, plus, one, ?]"
+    // should print "SA: [Why, is, this, witchery, still, happening, ?, My, question, is, :, what, is, one, plus, one, ?]"
 
     System.out.println();
 
@@ -147,10 +150,10 @@ public class Driver{
 
     SA.add(0,"Question");
     System.out.println("SA: " + SA);
-    // should print "SA: [Question, How, is, this, witchery, still, happening, ?, My, question, is, :, what, is, one, plus, one, ?]"
+    // should print "SA: [Question, Why, is, this, witchery, still, happening, ?, My, question, is, :, what, is, one, plus, one, ?]"
     SA.add(1,":");
     System.out.println("SA: " + SA);
-    // should print "SA: [Question, :, How, is, this, witchery, still, happening, ?, My, question, is, :, what, is, one, plus, one, ?]"
+    // should print "SA: [Question, :, Why, is, this, witchery, still, happening, ?, My, question, is, :, what, is, one, plus, one, ?]"
 
     System.out.println();
 
@@ -158,8 +161,11 @@ public class Driver{
     try {
       SA.add(16, "twenty");
       System.out.println("SA: " + SA);
-      SA.add(30, "haha"); // should trigger exception
-      System.out.println("SA: " + SA); // would print, should have no effect whatsoever due to exception above
+      // should print "SA: [Question, :, Why, is, this, witchery, still, happening, ?, My, question, is, :, what, is, one, twenty, plus, one, ?]"
+      SA.add(30, "haha");
+      // should trigger exception
+      System.out.println("SA: " + SA);
+      // would print, should have no effect whatsoever due to exception above
     } catch (IndexOutOfBoundsException e) {
       System.out.println(e);
     }
@@ -171,9 +177,9 @@ public class Driver{
     System.out.println("Element removed: " + SA.remove(0));
     // should print "Element removed: Question"
     System.out.println("Element removed: " + SA.remove(16));
-    // should print "Element removed: ?"
+    // should print "Element removed: one"
     System.out.println("SA: " + SA);
-    // should print "SA: [How, is, this, witchery, still, happening, My, question, is, :, what, is, one, plus, one, ?]"
+    // should print "SA: [Why, is, this, witchery, still, happening, ?, My, question, is, :, what, is, one, twenty, plus, ?]"
 
     System.out.println();
 
@@ -181,8 +187,11 @@ public class Driver{
     try {
       SA.remove(0);
       System.out.println("SA: " + SA);
-      SA.remove(500); // should trigger exception
-      System.out.println("SA: " + SA); // would print, should have no effect whatsoever due to exception above
+      // should print "SA: [is, this, witchery, still, happening, ?, My, question, is, :, what, is, one, twenty, plus, ?]"
+      SA.remove(500);
+      // should trigger exception
+      System.out.println("SA: " + SA);
+      // would print, should have no effect whatsoever due to exception above
     } catch (IndexOutOfBoundsException e) {
       System.out.println(e);
     }
