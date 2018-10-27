@@ -202,9 +202,31 @@ public class Driver{
     SuperArray woo = new SuperArray(4);
     System.out.println("woo(debug): " + woo.toStringDebug());
     // should print "woo(debug): [null, null, null, null]"
+    System.out.println("woo size: " + woo.size());
+    // should print "woo size: 0"
     SuperArray boo = new SuperArray(0);
     System.out.println("boo(debug): " + boo.toStringDebug());
     // should print "boo(debug): []"
-    
+    System.out.println("boo size: " + boo.size());
+    // should print "boo size: 0"
+    woo.add("woo");
+    System.out.println("woo: " + woo);
+    // should print "woo: [woo]"
+    System.out.println("woo(debug): " + woo.toStringDebug());
+    // should print "woo(debug): [woo, null, null, null]"
+    boo.add("boo");
+    System.out.println("boo: " + boo);
+    // should print "boo: [boo]"
+    System.out.println("boo(debug): " + boo.toStringDebug());
+    // should print "boo(debug): [boo]"
+    boo.add("hoo");
+    System.out.println("boo: " + boo);
+    // should print "boo: [boo, hoo]"
+    System.out.println("boo(debug): " + boo.toStringDebug());
+    // should print "boo(debug): [boo, hoo, null]"
+    System.out.println("woo size: " + woo.size());
+    // should print "woo size: 1"
+    System.out.println("boo size: " + boo.size());
+    // should print "boo size: 2"
   }
 }
