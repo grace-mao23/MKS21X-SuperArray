@@ -65,8 +65,7 @@ public class SuperArray{
   }
   public String set(int i, String str) {
     if (i < 0 || i >= size()) {
-      System.out.println("Error: index out of range");
-      return null;
+      throw new IndexOutOfBoundsException();
     } else {
       String old = data[i];
       data[i] = str;
