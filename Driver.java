@@ -148,13 +148,21 @@ public class Driver{
     SA.add(0,"Question");
     System.out.println("SA: " + SA);
     // should print "SA: [Question, How, is, this, witchery, still, happening, ?, My, question, is, :, what, is, one, plus, one, ?]"
-    SA.add(-1,"What");
-    // should print "Index out of range, cannot add element"
-    SA.add(20,"Hellllloooo");
-    // should print "Index out of range, cannot add element"
     SA.add(1,":");
     System.out.println("SA: " + SA);
     // should print "SA: [Question, :, How, is, this, witchery, still, happening, ?, My, question, is, :, what, is, one, plus, one, ?]"
+
+    System.out.println();
+
+    // EXCEPTION CASES WITH TRY AND CATCH FOR ADD (INT, STRING)
+    try {
+      SA.add(16, "twenty");
+      System.out.println("SA: " + SA);
+      SA.add(30, "haha"); // should trigger exception
+      System.out.println("SA: " + SA); // would print, should have no effect whatsoever due to exception above
+    } catch (IndexOutOfBoundsException e) {
+      System.out.println(e);
+    }
 
     System.out.println();
 
