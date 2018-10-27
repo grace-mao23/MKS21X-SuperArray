@@ -195,5 +195,16 @@ public class Driver{
     } catch (IndexOutOfBoundsException e) {
       System.out.println(e);
     }
+
+    System.out.println();
+
+    // new constructor
+    SuperArray woo = new SuperArray(4);
+    System.out.println("woo(debug): " + woo.toStringDebug());
+    // should print "woo(debug): [null, null, null, null]"
+    SuperArray boo = new SuperArray(0);
+    System.out.println("boo(debug): " + boo.toStringDebug());
+    // should print "boo(debug): []"
+    
   }
 }
