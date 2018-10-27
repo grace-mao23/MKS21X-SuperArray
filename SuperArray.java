@@ -58,14 +58,14 @@ public class SuperArray{
 
   public String get(int i) {
     if (i < 0 || i >= size()) {
-      throw new IndexOutOfBoundsException();
+      throw new IndexOutOfBoundsException("Index given is out of range for get method");
     } else {
       return data[i];
     }
   }
   public String set(int i, String str) {
     if (i < 0 || i >= size()) {
-      throw new IndexOutOfBoundsException();
+      throw new IndexOutOfBoundsException("Index given is out of range for set method");
     } else {
       String old = data[i];
       data[i] = str;
