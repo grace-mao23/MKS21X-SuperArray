@@ -2,9 +2,11 @@ public class SuperArray{
   private String[] data;
   private int size;
 
+  // default
   public SuperArray() {
     data = new String[10];
   }
+  // other choice
   public SuperArray(int startingCapacity) {
     data = new String[startingCapacity];
   }
