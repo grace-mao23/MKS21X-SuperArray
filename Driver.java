@@ -52,10 +52,15 @@ public class Driver{
     // should print "Third element of SA: this"
     System.out.println("Fourth element of SA: " + SA.get(3));
     // should print "Fourth element of SA: witchery"
-    System.out.println("Negative first element of SA: " + SA.get(-1));
-    // should print "Negative first element of SA: null"
-    System.out.println("Tenth element of SA: " + SA.get(9));
-    // should print "Tenth element of SA: null"
+
+    // EXCEPTION CASES WITH TRY AND CATCH
+    try {
+      System.out.println("Fourth element of SA: " + SA.get(3)); // should return witchery
+      System.out.println("Negative first element of SA: " + SA.get(-1)); // should trigger exception
+      System.out.println(SA.get(0)); // would work, but should have no effect whatsoever due to exception above
+    } catch (IndexOutOfBoundsException e) {
+      System.out.println(e);
+    }
 
     System.out.println();
 
@@ -65,12 +70,8 @@ public class Driver{
     // should print "SA: [How, is, this, witchery]"
     System.out.println("SA(debug): " + SA.toStringDebug());
     // should print "SA(debug): [How, is, this, witchery, null, null, null, null, null, null]"
-    System.out.println("Old fifth element of SA: " + SA.set(4,"still"));
-    // should print "Old fifth element of SA: null"
     System.out.println("SA: " + SA);
     // should print "SA: [How, is, this, witchery]"
-    System.out.println("Old negative first element of SA: " + SA.set(-1, "witchcraft"));
-    // should print "Old negative first element of SA: null"
     System.out.println("SA(debug): " + SA.toStringDebug());
     // should print "SA(debug): [How, is, this, witchery, null, null, null, null, null, null]"
 
