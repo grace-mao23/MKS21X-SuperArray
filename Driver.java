@@ -198,7 +198,7 @@ public class Driver{
 
     System.out.println();
 
-    // new constructor
+    // second constructor
     SuperArray woo = new SuperArray(4);
     System.out.println("woo(debug): " + woo.toStringDebug());
     // should print "woo(debug): [null, null, null, null]"
@@ -228,5 +228,8 @@ public class Driver{
     // should print "woo size: 1"
     System.out.println("boo size: " + boo.size());
     // should print "boo size: 2"
+    SuperArray last = new SuperArray();
+    System.out.println("last(debug): " + last.toStringDebug());
+    // should print "last(debug): [null, null, null, null, null, null, null, null, null, null]"
   }
 }
