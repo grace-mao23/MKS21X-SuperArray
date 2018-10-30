@@ -9,7 +9,7 @@ public class SuperArray{
   // other choice
   public SuperArray(int startingCapacity) {
     if (startingCapacity < 0) {
-      throw new IllegalArgumentException("Starting capacity cannot be negative")
+      throw new IllegalArgumentException("Starting capacity cannot be negative");
     }
     data = new String[startingCapacity];
   }
