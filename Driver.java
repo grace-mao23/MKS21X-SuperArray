@@ -231,5 +231,16 @@ public class Driver{
     SuperArray last = new SuperArray();
     System.out.println("last(debug): " + last.toStringDebug());
     // should print "last(debug): [null, null, null, null, null, null, null, null, null, null]"
+
+    try {
+      SuperArray moo = new SuperArray(3);
+      System.out.println("moo(debug): " + moo.toStringDebug());
+      // should print "moo(debug): [null, null, null]"
+      SuperArray koo = new SuperArray(-8);
+      System.out.println("koo(debug): " + koo.toStringDebug());
+      // should have no effect whatsoever
+    } catch (IllegalArgumentException e){
+      System.out.println(e);
+    }
   }
 }
